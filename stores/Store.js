@@ -8,6 +8,11 @@ export default class Store {
 
   addListener(listener) {
     // TODO
+    this.listeners.push(listener)
+    let removeListener = () => {
+      this.listeners = this.listeners.filter(l => l !== listener )
+    }
+    return removeListener
   }
 
   setState(state) {
