@@ -2,7 +2,14 @@
 
 import Store from './Store';
 
-class ResultStore {
+class ResultStore extends Store {
+  constructor(state={results: [], updated: new Date()}) {
+    super(state)
+  }
+
+  isOutdated(date) {
+    return this.getState().updated > date
+  }
 }
 
 const resultStore = new ResultStore();

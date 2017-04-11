@@ -10,7 +10,7 @@ describe('resultStore', function() {
     expect(resultStore).toBeA(Object);
   });
 
-  it('should be an instance of FileStore', function() {
+  it('should be an instance of ResultStore', function() {
     expect(resultStore.constructor.name).toBe('ResultStore');
   });
 
